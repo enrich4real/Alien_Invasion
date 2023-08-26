@@ -20,4 +20,4 @@ class Ship:
     def blitme(self):
         #Deploy the ship
         self.screen.blit(self.image, self.rect)
-        
+        #create an instance of the ship
