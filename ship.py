@@ -1,9 +1,11 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship:
+class Ship(Sprite):
     """A class to manage the ship"""
 
     def __init__(self, ai_game):
+        super().__init__()
         #initialize the ship and it's starting position
 
         self.screen = ai_game.screen
@@ -34,9 +36,10 @@ class Ship:
 
         if self.moving_left and self.rect.left>0 :
             self.x -= self.settings.ship_speed
-
-        
-        
         #update rect object from self.x
         self.rect.x = self.x
         
+    def center_ship(self):
+        #center the ship on the screen
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
