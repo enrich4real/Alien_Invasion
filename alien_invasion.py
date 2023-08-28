@@ -154,7 +154,7 @@ class AlienInvasion:
         # self.aliens.add(alien)
         alien_width, alien_height = alien.rect.size
         #creating a alien and adding until space filled
-        current_x, current_y = alien_width, alien_height
+        current_x, current_y = alien_width, alien_height +50
 
         while current_y < (self.settings.height - 5* alien_height):
 
